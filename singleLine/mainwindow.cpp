@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->doubleSpinBox->setValue(1.0);
 }
 
 MainWindow::~MainWindow()
@@ -20,7 +21,9 @@ void MainWindow::on_pushButton_clicked()
     int y1 = ui->first_y_coord_edit->text().toInt();
     int x2 = ui->second_x_coord_edit->text().toInt();
     int y2 = ui->second_y_coord_edit->text().toInt();
-    second_window.initCoords(x1, y1, x2, y2);
+    int rotate = ui->rotateSlider->value();
+    double scale = ui->doubleSpinBox->value();
+    second_window.init(x1, y1, x2, y2, rotate, scale);
     second_window.show();
 }
 

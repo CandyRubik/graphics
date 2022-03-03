@@ -15,7 +15,7 @@ class LinesDraw : public QWidget
 public:
     explicit LinesDraw(QWidget *parent = nullptr);
     ~LinesDraw();
-    void initCoords(int x1, int y1, int x2, int y2);
+    void init(int x1, int y1, int x2, int y2, int rotate, double scale);
     void changeRotation(int rotation);
     void chageScale(double scale);
 private:
