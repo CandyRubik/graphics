@@ -65,6 +65,7 @@ void LinesDraw::paintEvent(QPaintEvent *e)
 {
     Q_UNUSED(e);
     QPainter painter(this);
+    painter.setBrush(Qt::red);
     painter.translate(center_rotation_x, center_rotation_y);
     painter.rotate(rotation);
     painter.translate(-center_rotation_x, -center_rotation_y);
