@@ -21,9 +21,11 @@ void MainWindow::on_pushButton_clicked()
     int y1 = ui->first_y_coord_edit->text().toInt();
     int x2 = ui->second_x_coord_edit->text().toInt();
     int y2 = ui->second_y_coord_edit->text().toInt();
+    int x3 = ui->third_x_coord_edit->text().toInt();
+    int y3 = ui->third_y_coord_edit->text().toInt();
     int rotate = ui->rotateSlider->value();
     double scale = ui->doubleSpinBox->value();
-    second_window.init(x1, y1, x2, y2, rotate, scale);
+    second_window.init(x1, y1, x2, y2, x3, y3, rotate, scale);
     second_window.show();
 }
 
