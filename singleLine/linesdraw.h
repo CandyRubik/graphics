@@ -28,6 +28,8 @@ private:
     int center_rotation_x;
     int center_rotation_y;
     double scale = 1;
+    int wide;
+    int high;
 
 protected:
     void paintEvent(QPaintEvent* e) override;
